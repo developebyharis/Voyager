@@ -29,11 +29,13 @@ document.getElementById('search-button').addEventListener('click', function () {
 
 async function fetchDefinition(word) {
     const url = `https://api.api-ninjas.com/v1/dictionary?word=${word}`;
+    const apiKey = process.env.API_KEY;
+
 
     const options = {
         method: 'GET',
         headers: {
-            'X-Api-Key': 'Bz21Sz1VmrGdrIAckpnelw==NpsekxxcALhQ9pcm',
+            'X-Api-Key': apiKey,
         }
     };
 
